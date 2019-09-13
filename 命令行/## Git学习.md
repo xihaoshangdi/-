@@ -35,5 +35,21 @@ git status 命令用于查看项目的当前状态。
 
 ### git branch x
 
+### git branch 
+
 ### git checkout x | master
+
+### git merge x
+
+在主分支进行合并
+
+### git status -sb
+
+### git branch -d x
+
+## git 远程仓库
+
+### SSH key
+
+
 
