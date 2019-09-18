@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>a标签属性</title>
+  </head>
+  <body>
+    <h1>网址:三种协议</h1>
+    <ul>
+      <li><a href="https://baidu.com">https协议</a></li>
+      <li><a href="http://baidu.com">http协议</a></li>
+      <li><a href="//baidu.com">无协议</a></li>
+    </ul>
+    <h1>路径:相对和绝对</h1>
+    <ul>
+      <li><a href="/test/test.html">基于根目录的绝对路径</a></li>
+      <li><a href="test/test.html">基于当前地址的相对路径</a></li>
+      <li><a href="index.html">基于当前地址的相对路径</a></li>
+      <li><a href="./index.html">基于当前目录的绝对路径</a></li>
+    </ul>
+    <h1>伪协议</h1>
+    <ul>
+      <li>
+        <a href="javascript:console.log('通过伪协议形式显示了这句话');"
+          >通过伪协议形式显示了这句话</a
+        >
+      </li>
+      <li><a href="javascript:">一个什么都不做的a标签</a></li>
+      <li><a href="mailto:xihaoshangdi@163.com">163邮箱</a></li>
+      <li><a href="tel:18102036153">电话</a></li>
+    </ul>
+    <h1>id</h1>
+    <a href="#top">跳转到Top</a>
+
+    <h1>target</h1>
+    <a href="//baidu.com" target="Test">baidu</a>
+    <a href="//taobao.com" target="Test">taobao</a>
+  </body>
+</html>
