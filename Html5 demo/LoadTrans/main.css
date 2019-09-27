@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+}
+
+.container {
+  margin: 100px;
+  border: 1px solid green;
+  display: flex;
+  width: 450px;
+  height: 200px;
+
+  justify-content: space-around;
+  align-items: center;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  border: 1px solid red;
+  text-align: center;
+  line-height: 50px;
+  transition: all linear 2s;
+}
+
+.box.arod {
+  animation: 1s arod linear;
+}
+
+.box.demo {
+  transform: translate(359px) rotate(45deg);
+}
+
+@keyframes arod {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-10px, -7px) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(-45px, -40px) rotate(-90deg);
+  }
+
+  90% {
+    transform: translate(-80px, -7px) rotate(-180deg);
+  }
+
+  100% {
+    transform: translate(-90px, 0px) rotate(-180deg);
+  }
+}
