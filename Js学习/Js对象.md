@@ -208,4 +208,28 @@ Current Value (cur) (当前值)
 Current Index (idx) (当前索引)
 Source Array (src) (源数组)
 ## Js函数
+### 函数的定义
+```javascript
+function 函数名(形参){
+  return 返回值
+}//具名函数
 
+let fn=function(形参){return 返回值}//匿名函数||函数表达式
+
+let f1= (形参,形参)=>{return 返回值}
+let f2= (形参,形参)=>({name:x,age,y})
+//箭头函数
+
+let fn=new Function(形参,形参,函数体)
+//构造函数
+```
+### 闭包
+如果一个函数用到了外部的变量，那么这个函数加这个变量就叫做闭包
+
+### 调用栈
+
+JS引擎再调用一个函数前，会将当前的环境压入栈中中，执行完成后，再弹栈返回上个环境。
+
+### this
+
+### 立即执行函数
