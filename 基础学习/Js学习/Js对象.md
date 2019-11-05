@@ -207,6 +207,7 @@ Accumulator (acc) (累计器)
 Current Value (cur) (当前值)
 Current Index (idx) (当前索引)
 Source Array (src) (源数组)
+
 ## Js函数
 ### 函数的定义
 ```javascript
@@ -222,6 +223,42 @@ let f2= (形参,形参)=>({name:x,age,y})
 
 let fn=new Function(形参,形参,函数体)
 //构造函数
+```
+### Js函数的执行时机
+```javascript
+let i = 0
+for(i = 0; i<6; i++){
+  setTimeout(()=>{
+    console.log(i)
+  },0)
+}
+```
+上面的代码打印出了6个6，分析Js的执行过程，首先执行for循环，执行的过程中，遇到setTimeout函数,加入到任务队列中，继续循环
+循环6次后，for循环结束，此时i的值为6，继续队列中的下一个任务，也就是setTimeout函数的内容，打印出6，一共触发6次，所以打印6个6。
+
+如果代码换成：
+```javascript
+for(let i = 0; i<6; i++){
+  setTimeout(()=>{
+    console.log(i)
+  },0)
+}
+```
+结果会打印出0，1，2，3，5.原因是let在此处做了优化，先保留了当前的i值，再进行下一次循环。
+
+拓展思考：
+考虑通过传第一次值的方式保留i的变量，try-catch可以分割作用域以达到保留值的效果。
+```javascript
+let i
+for(i = 0; i < 6; i++) {
+    try {
+        throw(i)
+    } catch(j) {
+        setTimeout(function () {
+            console.log(j);
+        });
+    }
+}
 ```
 ### 闭包
 如果一个函数用到了外部的变量，那么这个函数加这个变量就叫做闭包
