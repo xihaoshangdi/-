@@ -1,0 +1,20 @@
+滚动条的宽度是16-19
+
+dom   页面
+
+结点   元素 HtmlElment ---标签 
+
+
+express.static
+
+mysql 版本兼容问题
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
+
+ts模板
+import Vue from 'vue';
+import {Component} from "vue-property-decorator";
+
+@Component
+export default class ${COMPONENT_NAME} extends Vue {
+
+}

@@ -1,0 +1,5 @@
+button, input{
+  font: inherit;
+}
+
+默认不继承字体

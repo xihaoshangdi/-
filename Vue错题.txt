@@ -1,0 +1,43 @@
+Vue 是一套--用于构建用户界面的渐进式--框架
+
+Vue.js 使用了基于 XML 的模板语法 ❌
+Vue.js 使用了基于 HTML 的模板语法
+
+关于 Object.freeze() 正确的有
+被冻结对象有一个属性也是对象，那么这个作为属性的对象也是被冻结的。❌
+
+Vue的虚拟dom更新和异步渲染
+https://zhuanlan.zhihu.com/p/39421405
+
+
+V-for指令应该放置在被迭代的标签上，而不是被迭代项的父级标签上
+
+
+关于事件监听有以下代码片段-点击对应div后调用methods.add  都可以
+<div @click="add"></div>
+<div @click="add()"></div>
+
+https://zhuanlan.zhihu.com/p/54625074
+
+
+v-model的实质：v-bind绑定value属性＋v-on监听input事件获取新值并同步
+<input
+  v-bind:value="searchText"
+  v-on:input="searchText = $event.target.value"
+>
+
+遵循 W3C 规范中的自定义组件名 (字母全小写且必须包含一个连字符)
+
+初始化默认props内的布尔值为true
+Vue.component('blog-post', {
+    props: {
+        isPublished: Boolean
+    }
+})
+
+原始模板
+<input type="date" class="form-control">
+父级传入的模板
+<bootstrap-date-input type="input" class="hi"></bootstrap-date-input>
+从外部提供给组件的值会替换掉组件内部设置好的值，但是class和style会合并
+
